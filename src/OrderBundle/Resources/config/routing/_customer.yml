@@ -1,0 +1,22 @@
+custom_list:
+    path:    /
+    defaults: 
+        _controller: OrderBundle:Customer:customList
+
+
+custom_redirect:
+    path:    /redirect
+    defaults:
+        _controller: OrderBundle:Customer:redirect
+
+
+custom_detail:
+    path:    /{name}.{_format}
+    methods:    [GET]
+    defaults: 
+        _controller: OrderBundle:Customer:customDetail
+        _format:    html
+    requirements:
+        name:    "[a-z0-6-]+"
+        _format:    html|json
+

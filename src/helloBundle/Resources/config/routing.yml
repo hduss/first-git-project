@@ -1,0 +1,12 @@
+blog_homepage:
+    path:    /
+    defaults: { _controller: helloBundle:Default:index }
+
+blog:
+    resource: "routing/blog.yml"
+    prefix: /blog
+
+
+
+
+## path--> apres les 2 points, toujours mettre soit 2 ou 4 espaces, mais toujours les memes ##

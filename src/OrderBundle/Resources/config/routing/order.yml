@@ -1,0 +1,47 @@
+order_list:
+    path:    /
+    defaults: 
+        _controller: OrderBundle:Order:orderList
+##  ici on specifie la fonction (orderListDetail) a utiliser a partir de quel controller (OrderController)  ##
+
+
+order_create:
+    path:    /create
+    defaults:
+        _controller: OrderBundle:Order:orderCreate
+
+
+
+##  toujours mettre les url variables apres les statiques  ##
+order_detail:
+    path:    /{id}
+    defaults: 
+        _controller: OrderBundle:Order:orderDetail
+    requirements:
+        id:    \d+
+
+
+
+order_update:
+    path:    /{id}/update
+    defaults:
+        _controller: OrderBundle:Order:orderUpdate
+    requirements:
+        id: \d+
+
+
+order_remove:
+    path:    /{id}/remove
+    defaults:
+        _controller: OrderBundle:Order:orderRemove 
+    requirements:
+        id: \d+
+
+
+order_add_line:
+    path:    /{id}/addline
+    defaults:
+        _controller: OrderBundle:Order:orderAddLine
+    requirements:
+        id: \d+
+

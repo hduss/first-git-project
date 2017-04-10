@@ -1,0 +1,27 @@
+{# src/OrderBundle/Resources/view/Order/layout.html.twig #}
+
+{% extends 'OrderBundle::base.html.twig' %}
+
+{% block body %}
+
+    <div id="main">
+
+        {% block main %}{% endblock %}
+
+    </div>
+    
+    <hr>
+    
+    <div id="list">
+
+        {% block list %}
+
+            <h2>Block list</h2>
+
+            {{ render(controller('OrderBundle:Order:orderSideBar', {'max':2})) }}
+
+        {% endblock %}
+
+    </div>
+
+{% endblock body %}

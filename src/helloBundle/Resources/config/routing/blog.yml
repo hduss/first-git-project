@@ -1,0 +1,20 @@
+
+blog_list:
+    path:    /
+    defaults:
+        _controller: helloBundle:Default:list
+
+
+
+blog_detail:
+    path:    /{slug}.{_format}
+    methods:         [GET]
+    defaults:
+        _controller: helloBundle:Default:detail
+        _format:     html
+    requirements:
+        slug:        "[a-z0-9-]+"
+        _format:     html|json
+
+
+

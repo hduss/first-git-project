@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+   <title>OrderBundle</title>
+
+   <link rel="stylesheet" type="text/css" href="{{ asset('bundles/order/style.css') }}"/>
+
+
+</head>
+
+
+<body>
+
+	<h1>Order Bundle</h1>
+	<hr>
+
+	<div id="navbar">
+		{% include "OrderBundle:Fragment:navbar.html.twig" %}
+	</div>
+
+   {% block body %}{% endblock %}
+</body>
+
+</html>

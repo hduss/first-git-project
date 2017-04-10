@@ -1,0 +1,22 @@
+order_customer:
+    resource: "@OrderBundle/Resources/config/routing/customer.yml"
+    prefix:   /customer
+
+order_homepage:
+    path:    /
+    defaults: { _controller: OrderBundle:Default:index}
+ ##  on specifie le controller DefaultController pour l'index ##
+
+
+
+
+##  ressource renvoi vers un autre dossier yml qui fait appelle aux autres controllers specifiques  ##
+
+order:
+    resource: "routing/order.yml"
+    prefix: /order
+
+
+#customer:
+#   resource: "routing/customer.yml"
+#  prefix: /customer  

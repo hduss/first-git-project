@@ -1,0 +1,31 @@
+OrderBundle\Entity\Line:
+    type: entity
+    table: null
+    repositoryClass: OrderBundle\Repository\LineRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        designation:
+            type: string
+            length: '255'
+        price:
+            type: decimal
+            precision: '7'
+            scale: '2'
+        quantity:
+            type: integer
+##  on specifie qu'il y a une relation many(line) to one(Cart) 
+##  Line est le proprietaire de la relation
+    manyToOne:
+## cart represente la proprietée privée $cart de la classe Line / c'est pour indiquer que l'association se fait sur cette propriété  ##
+        cart:
+            targetEntity: OrderBundle\Entity\Cart
+            inversedBy: lines
+            joinColumn:
+                name: cart_id
+                oneDelete: 'CASCADE'
+    lifecycleCallbacks: {  }
