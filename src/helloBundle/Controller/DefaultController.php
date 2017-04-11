@@ -32,4 +32,10 @@ class DefaultController extends Controller
     {
         return new Response('Detail action : ' . $slug . ' - ' . $_format);
     }
+
+
+    public function orderAction()
+    {
+    	return new Response
+    }
 }
